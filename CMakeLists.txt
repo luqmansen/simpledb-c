@@ -12,7 +12,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 
 # Source files
-file (GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.c)
+file (GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*/*.c)
 
 # MAIN -- separate executable
 # Key idea: SEPARATE OUT your main() function into its own file so it can be its
@@ -44,8 +44,7 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 ## test files
 file(GLOB TEST_SOURCE_FILES ${PROJECT_SOURCE_DIR}/tests/*.cpp)
 
-add_executable(runUnitTests ${TEST_SOURCE_FILES}
-        tests/test_add.cpp)
+add_executable(runUnitTests ${TEST_SOURCE_FILES})
 
 # Linking gtest-related
 target_link_libraries(runUnitTests gtest gtest_main)

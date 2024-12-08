@@ -1,20 +1,6 @@
 #include <iostream>
 #include "gtest/gtest.h"
 
-extern "C" {
-    #include "add.h"
-}
-
-
-
-// IndependentMethod is a test case - here, we have 2 tests for this 1 test case
-TEST(IndependentMethod, Add) {
-    EXPECT_EQ(3, add(1, 2));
-}
-
-TEST(IndependentMethod, Sub) {
-    EXPECT_EQ(1, sub(2, 1));
-}
 
 // The fixture for testing class Project1. From google test primer.
 class Project1Test : public ::testing::Test {
@@ -49,7 +35,7 @@ protected:
 // Test case must be called the class above
 // Also note: use TEST_F instead of TEST to access the test fixture (from google test primer)
 TEST_F(Project1Test, MethodBarDoesAbc) {
-    EXPECT_EQ(0, sub(1,1));
+    EXPECT_EQ(0, printf("%d",1));
 }
 
 // }  // namespace - could surround Project1Test in a namespace
