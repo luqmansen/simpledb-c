@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.29)
-set(CMAKE_C_STANDARD 17)
+cmake_minimum_required(VERSION 3.16.3)
+set(CMAKE_C_STANDARD 11)
 
 project(simpledb)
 # after `project` is called, the following vars are available
